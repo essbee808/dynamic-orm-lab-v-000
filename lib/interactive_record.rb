@@ -58,7 +58,7 @@ class InteractiveRecord
   def self.find_by(column_name)
     binding.pry
     el_key = column_name.keys[0]
-    el_value = col_names_for_insert.values
+    el_value = 
     sql = "SELECT * FROM #{self.table_name} WHERE #{el_key.to_s} = #{el_value.to_s}"
     DB[:conn].execute(sql)
   end
