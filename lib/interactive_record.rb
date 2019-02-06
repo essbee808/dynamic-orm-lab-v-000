@@ -55,7 +55,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
   
-  def self.find_by(col_names_for_insert)
+  def self.find_by(column_names)
     binding.pry
     el_key = col_names_for_insert.keys
     el_value = col_names_for_insert.values
