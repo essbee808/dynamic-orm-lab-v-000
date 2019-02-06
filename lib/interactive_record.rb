@@ -59,6 +59,5 @@ class InteractiveRecord
     el_value = column_name[el_key]
     sql = "SELECT * FROM #{self.table_name} WHERE #{el_key.to_s} = '#{el_value.to_s}'"
     DB[:conn].execute(sql)
-    binding.pry
   end
 end
