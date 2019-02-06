@@ -55,7 +55,6 @@ class InteractiveRecord
   end
   
   def self.find_by(column_name)
-    #binding.pry
     el_key = column_name.keys[0]
     el_value = column_name[el_key]
     sql = "SELECT * FROM #{self.table_name} WHERE #{el_key.to_s} = '#{el_value.to_s}'"
