@@ -60,7 +60,7 @@ class InteractiveRecord
     # sql = "SELECT * FROM #{self.table_name} WHERE #{el_key.to_s} = '#{el_value.to_s}'"
     # DB[:conn].execute(sql)
     binding.pry
-    sql = "SELECT * FROM ? WHERE #{el_key.to_s} = ?"
-    DB[:conn].execute(sql, self.table_name, el_value.to_s)
+    sql = "SELECT * FROM #{self.table_name} WHERE #{el_key.to_s} = ?"
+    DB[:conn].execute(sql, , el_value.to_s)
   end
 end
